@@ -144,6 +144,7 @@ class Escuchar {
         }
 
         mensaje.reply('El bot sólo puede escuchar un server a la vez');
+
         return false;
     }
 
