@@ -56,7 +56,7 @@ async function leerComando(comando, args, mensaje) {
     if (mensaje.member.id !== client.user.id) {
         switch (comando) {
             case 'help':
-                let msg = "m!<frase>: dice alguna frases randoms (Ej: c!popo)\n" +
+                let msg = "m!<frase>: dice alguna frases randoms (Ej: m!popo)\n" +
                     "m!sonidos: Muestra los sonidos disponibles para reproducir";
                 mensaje.reply(msg);
                 break;
@@ -93,7 +93,7 @@ async function leerComando(comando, args, mensaje) {
 
                 // SI ESTÁ EN MODO AUTOMÁTICO
                 const automatico = app.data.automatico.get(mensaje.guild.id);
-                if (automatico) throw new Error('El bot está en modo automático men, desactivalo con c!manual');
+                if (automatico) throw new Error('El bot está en modo automático men, desactivalo con m!manual');
 
                 try {
                     app.sonidos.agregarCola(comando, mensaje);
